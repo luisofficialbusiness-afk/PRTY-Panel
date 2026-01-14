@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>PRTY Admin Panel</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div id="login">
+  <h1>PRTY Admin</h1>
+  <input id="user" placeholder="Username">
+  <input id="pass" type="password" placeholder="Password">
+  <button onclick="login()">Login</button>
+</div>
+
+<div id="panel" style="display:none">
+  <div class="topbar">
+    <h2 id="welcome"></h2>
+    <div id="clock"></div>
+    <button onclick="toggleCatastrophic()">☢ Catastrophic Mode</button>
+  </div>
+
+  <div class="stats">
+    <div id="statsBox"></div>
+  </div>
+
+  <button onclick="openForm()">➕ New Ticket</button>
+
+  <div id="tickets"></div>
+
+  <div id="inbox"></div>
+</div>
+
+<div id="form" style="display:none">
+  <h3>New Ticket</h3>
+  <input id="title" placeholder="Title">
+  <select id="type">
+    <option>Bug</option>
+    <option>Suggestion</option>
+  </select>
+  <select id="severity">
+    <option>Easy</option>
+    <option>Mild</option>
+    <option>Severe</option>
+    <option>Critical</option>
+  </select>
+  <textarea id="desc" placeholder="Description"></textarea>
+  <button onclick="submitTicket()">Submit</button>
+  <button onclick="closeForm()">Cancel</button>
+</div>
+
+<script src="js/admin.js"></script>
+</body>
+</html>
