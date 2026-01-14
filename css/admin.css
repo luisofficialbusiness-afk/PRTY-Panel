@@ -1,69 +1,60 @@
 body {
-  margin: 0;
-  font-family: 'Arial', sans-serif;
-  background: #0f0f1a;
-  color: #fff;
+  margin:0;
+  font-family: Arial;
+  background:#0b0016;
+  color:white;
 }
 
-.hidden { display: none; }
-
-.clock {
-  background: linear-gradient(90deg, #ff5f6d, #ffc371);
-  padding: 10px 20px;
-  border-radius: 12px;
-  font-weight: bold;
+#login, #form {
+  position:fixed;
+  top:50%;
+  left:50%;
+  transform:translate(-50%,-50%);
+  background:#16002b;
+  padding:20px;
+  border-radius:10px;
+  box-shadow:0 0 20px purple;
 }
 
-.modal {
-  position: fixed;
-  top:0; left:0;
-  width: 100%; height:100%;
-  background: rgba(0,0,0,0.85);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index:100;
-}
-
-.modal-content {
-  background: #1a1a2e;
-  padding: 20px;
-  border-radius: 12px;
-  width: 400px;
-  max-width: 90%;
-}
-
-input, textarea, select {
-  width: 100%; margin: 5px 0; padding: 8px; border-radius: 8px; border: none;
+input, select, textarea {
+  width:100%;
+  margin:5px 0;
+  padding:8px;
+  border:none;
+  border-radius:5px;
 }
 
 button {
-  padding: 10px 15px; margin: 5px 5px 0 0; border: none;
-  border-radius: 8px;
-  background: linear-gradient(90deg, #36d1dc, #5b86e5);
-  color: #fff; cursor: pointer;
-}
-button:hover { opacity: 0.85; }
-
-.error { color: #ff6b6b; font-weight: bold; }
-
-.header { display: flex; justify-content: space-between; align-items: center; padding: 20px; }
-.stats, .inbox, .controls { padding: 20px; }
-
-.bugContainer {
-  padding: 20px;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 15px;
+  background:#b200ff;
+  border:none;
+  padding:10px;
+  color:white;
+  border-radius:6px;
+  cursor:pointer;
 }
 
-.bugCard {
-  background: #2a2a40;
-  padding: 15px;
-  border-radius: 12px;
+.topbar {
+  display:flex;
+  justify-content:space-between;
+  background:#1e003a;
+  padding:10px;
 }
 
-.bugCard.ownerMade { border: 2px solid #ffc107; }
+.stats {
+  padding:10px;
+}
 
-.inbox ul { list-style: none; padding: 0; }
-.inbox li { background: #1a1a2e; padding: 10px; margin: 5px 0; border-radius: 8px; }
+.ticket {
+  background:#220044;
+  padding:10px;
+  margin:10px;
+  border-radius:8px;
+}
+
+.owner {
+  border:2px solid gold;
+}
+
+.deleted {
+  opacity:.3;
+}
